@@ -16,7 +16,9 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/scratch-paper/:gistId" component={App}/>
         <Route exact path="/:categoryKey/:algorithmKey" component={App}/>
-        <Route path="/" component={<Redirect to="/dynamic-programming/bellman-fords-shortest-path" />}/>
+        <Route path="/">
+          <Redirect to="/dynamic-programming/bellman-fords-shortest-path" />
+        </Route>
       </Switch>
     </BrowserRouter>
   </Provider>, document.getElementById('root'));
