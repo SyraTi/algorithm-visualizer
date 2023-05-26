@@ -228,10 +228,6 @@ class App extends BaseComponent {
 
     return (
       <div className={styles.app}>
-        {/* <Helmet>
-          <title>{title}</title>
-          <meta name="description" content={description}/>
-        </Helmet> */}
         <Header className={styles.header} onClickTitleBar={this.handleClickTitleBar}
                 navigatorOpened={navigatorOpened} loadScratchPapers={this.loadScratchPapers}
                 ignoreHistoryBlock={this.ignoreHistoryBlock}/>

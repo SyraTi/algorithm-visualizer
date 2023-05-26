@@ -117,61 +117,8 @@ class Header extends BaseComponent {
 
     return (
       <header className={classes(styles.header, className)}>
-        {/* <div className={styles.row}>
-          <div className={styles.section}>
-            <Button className={styles.title_bar} onClick={onClickTitleBar}>
-              {
-                titles.map((title, i) => [
-                  scratchPaper && i === 1 ?
-                    <AutosizeInput className={styles.input_title} key={`title-${i}`} value={title}
-                                   onClick={e => e.stopPropagation()} onChange={e => this.handleChangeTitle(e)}/> :
-                    <Ellipsis key={`title-${i}`}>{title}</Ellipsis>,
-                  i < titles.length - 1 &&
-                  <FontAwesomeIcon className={styles.nav_arrow} fixedWidth icon={faAngleRight} key={`arrow-${i}`}/>,
-                ])
-              }
-              <FontAwesomeIcon className={styles.nav_caret} fixedWidth
-                               icon={navigatorOpened ? faCaretDown : faCaretRight}/>
-            </Button>
-          </div>
-          <div className={styles.section}>
-            <Button icon={permitted ? faSave : faCodeBranch} primary disabled={permitted && saved}
-                    onClick={() => this.saveGist()}>{permitted ? 'Save' : 'Fork'}</Button>
-            {
-              permitted &&
-              <Button icon={faTrashAlt} primary onClick={() => this.deleteGist()} confirmNeeded>Delete</Button>
-            }
-            <Button icon={faFacebook} primary
-                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`}>Share</Button>
-            <Button icon={faExpandArrowsAlt} primary
-                    onClick={() => this.handleClickFullScreen()}>Fullscreen</Button>
-          </div>
-        </div> */}
         <div className={styles.row}>
           <div className={styles.section}>
-            {/* {
-              user ?
-                <Button className={styles.btn_dropdown} icon={user.avatar_url}>
-                  {user.login}
-                  <div className={styles.dropdown}>
-                    <ListItem label="Sign Out" href="/api/auth/destroy" rel="opener"/>
-                  </div>
-                </Button> :
-                <Button icon={faGithub} primary href="/api/auth/request" rel="opener">
-                  <Ellipsis>Sign In</Ellipsis>
-                </Button>
-            } */}
-            <Button className={styles.btn_dropdown} icon={faStar}>
-              {languages.find(language => language.ext === ext).name}
-              <div className={styles.dropdown}>
-                {
-                  languages.map(language => language.ext === ext ? null : (
-                    <ListItem key={language.ext} onClick={() => this.props.setExt(language.ext)}
-                              label={language.name}/>
-                  ))
-                }
-              </div>
-            </Button>
           </div>
           <Player className={styles.section}/>
         </div>
