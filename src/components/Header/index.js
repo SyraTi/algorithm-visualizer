@@ -117,7 +117,7 @@ class Header extends BaseComponent {
 
     return (
       <header className={classes(styles.header, className)}>
-        <div className={styles.row}>
+        {/* <div className={styles.row}>
           <div className={styles.section}>
             <Button className={styles.title_bar} onClick={onClickTitleBar}>
               {
@@ -146,7 +146,7 @@ class Header extends BaseComponent {
             <Button icon={faExpandArrowsAlt} primary
                     onClick={() => this.handleClickFullScreen()}>Fullscreen</Button>
           </div>
-        </div>
+        </div> */}
         <div className={styles.row}>
           <div className={styles.section}>
             {
