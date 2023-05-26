@@ -26,11 +26,10 @@ class App extends BaseComponent {
     super(props);
 
     this.state = {
-      workspaceVisibles: [true, true, false],
-      workspaceWeights: [1, 2, 0],
+      workspaceVisibles: [true, true],
+      workspaceWeights: [1, 2],
     };
 
-    this.codeEditorRef = React.createRef();
 
     this.ignoreHistoryBlock = this.ignoreHistoryBlock.bind(this);
     this.handleClickTitleBar = this.handleClickTitleBar.bind(this);
@@ -206,7 +205,6 @@ class App extends BaseComponent {
 
   handleChangeWorkspaceWeights(workspaceWeights) {
     this.setState({ workspaceWeights });
-    this.codeEditorRef.current.handleResize();
   }
 
   toggleNavigatorOpened(navigatorOpened = !this.state.workspaceVisibles[0]) {
@@ -235,9 +233,6 @@ class App extends BaseComponent {
                             visibles={workspaceVisibles} onChangeWeights={this.handleChangeWorkspaceWeights}>
           <Navigator/>
           <VisualizationViewer className={styles.visualization_viewer}/>
-          <TabContainer className={styles.editor_tab_container}>
-            <CodeEditor ref={this.codeEditorRef}/>
-          </TabContainer>
         </ResizableContainer>
         <ToastContainer className={styles.toast_container}/>
       </div>
