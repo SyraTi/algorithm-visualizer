@@ -149,7 +149,7 @@ class Header extends BaseComponent {
         </div> */}
         <div className={styles.row}>
           <div className={styles.section}>
-            {
+            {/* {
               user ?
                 <Button className={styles.btn_dropdown} icon={user.avatar_url}>
                   {user.login}
@@ -160,7 +160,7 @@ class Header extends BaseComponent {
                 <Button icon={faGithub} primary href="/api/auth/request" rel="opener">
                   <Ellipsis>Sign In</Ellipsis>
                 </Button>
-            }
+            } */}
             <Button className={styles.btn_dropdown} icon={faStar}>
               {languages.find(language => language.ext === ext).name}
               <div className={styles.dropdown}>
