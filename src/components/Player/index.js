@@ -151,10 +151,10 @@ class Player extends BaseComponent {
 
     return (
       <div className={classes(styles.player, className)}>
-        <Button icon={faWrench} primary disabled={building} inProgress={building}
+        {/* <Button icon={faWrench} primary disabled={building} inProgress={building}
                 onClick={() => this.build(editingFile)}>
           {building ? 'Building' : 'Build'}
-        </Button>
+        </Button> */}
         {
           playing ? (
             <Button icon={faPause} primary active onClick={() => this.pause()}>Pause</Button>
