@@ -80,11 +80,11 @@ class Navigator extends React.Component {
 
     return (
       <nav className={classes(styles.navigator, className)}>
-        <div className={styles.search_bar_container}>
+        {/* <div className={styles.search_bar_container}>
           <FontAwesomeIcon fixedWidth icon={faSearch} className={styles.search_icon}/>
           <input type="text" className={styles.search_bar} aria-label="Search" placeholder="Search ..." autoFocus
                  value={query} onChange={e => this.handleChangeQuery(e)}/>
-        </div>
+        </div> */}
         <div className={styles.algorithm_list}>
           {
             categories.map(category => {
@@ -95,22 +95,22 @@ class Navigator extends React.Component {
                 if (!algorithms.length) return null;
               }
               return (
-                <ExpandableListItem key={category.key} onClick={() => this.toggleCategory(category.key)}
-                                    label={category.name}
-                                    opened={categoryOpened}>
-                  {
+                // <ExpandableListItem key={category.key} onClick={() => this.toggleCategory(category.key)}
+                //                     label={category.name}
+                //                     opened={categoryOpened}>
+                  // {
                     algorithms.map(algorithm => (
                       <ListItem indent key={algorithm.key}
                                 selected={category.key === categoryKey && algorithm.key === algorithmKey}
                                 to={`/${category.key}/${algorithm.key}`} label={algorithm.name}/>
                     ))
-                  }
-                </ExpandableListItem>
+                  // }
+                // </ExpandableListItem>
               );
             })
           }
         </div>
-        <div className={styles.footer}>
+        {/* <div className={styles.footer}>
           <ExpandableListItem icon={faCode} label="Scratch Paper" onClick={() => this.toggleScratchPaper()}
                               opened={scratchPaperOpened}>
             <ListItem indent label="New ..." to="/scratch-paper/new"/>
@@ -125,7 +125,7 @@ class Navigator extends React.Component {
                     href="https://github.com/algorithm-visualizer/algorithm-visualizer/wiki"/>
           <ListItem icon={faGithub} label="Fork me on GitHub"
                     href="https://github.com/algorithm-visualizer/algorithm-visualizer"/>
-        </div>
+        </div> */}
       </nav>
     );
   }
