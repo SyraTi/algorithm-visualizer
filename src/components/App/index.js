@@ -232,9 +232,9 @@ class App extends BaseComponent {
           <title>{title}</title>
           <meta name="description" content={description}/>
         </Helmet> */}
-        {/* <Header className={styles.header} onClickTitleBar={this.handleClickTitleBar}
+        <Header className={styles.header} onClickTitleBar={this.handleClickTitleBar}
                 navigatorOpened={navigatorOpened} loadScratchPapers={this.loadScratchPapers}
-                ignoreHistoryBlock={this.ignoreHistoryBlock}/> */}
+                ignoreHistoryBlock={this.ignoreHistoryBlock}/>
         <ResizableContainer className={styles.workspace} horizontal weights={workspaceWeights}
                             visibles={workspaceVisibles} onChangeWeights={this.handleChangeWorkspaceWeights}>
           <Navigator/>
