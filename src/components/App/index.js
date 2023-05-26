@@ -26,8 +26,8 @@ class App extends BaseComponent {
     super(props);
 
     this.state = {
-      workspaceVisibles: [true, true, true],
-      workspaceWeights: [1, 2, 2],
+      workspaceVisibles: [true, true, false],
+      workspaceWeights: [1, 2, 0],
     };
 
     this.codeEditorRef = React.createRef();
